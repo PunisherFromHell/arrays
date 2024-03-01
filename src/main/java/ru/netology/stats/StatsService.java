@@ -43,7 +43,7 @@ public class StatsService {
 
     public long salesLessAverage(long[] sales) {
         int numberOfMonths = 0;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageSumOfSales(sales)) {
                 numberOfMonths++;
             }
@@ -53,7 +53,7 @@ public class StatsService {
 
     public long salesMoreAverage(long[] sales) {
         int numberOfMonths = 0;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageSumOfSales(sales)) {
                 numberOfMonths++;
             }
